@@ -34,12 +34,18 @@ function setFlag2(e){
     let val2=currency1.value;
     let val3=url.substring(50,53);
     let val4=currency2.value;
+
     let newURL= url.replace(`${val1}`,`${val2}`);
     let newURLLast=newURL.replace(`${val3}`,`${val4}`)
+    if(val2==="EUR"){
+        newURL= url.replace(`${val3}`,`${val4}`);
+        newURLLast=newURL.replace(`${val1}`,`${val2}`) 
+    } 
+    console.log(newURLLast);
     return newURLLast
 
 }
 changeBtn.addEventListener("click",function(){
   let api=changeAPI();
- fetch(api).then(res=>res.json()).then(val=>output.value=Math.round(val.info.rate*money.value))
+ fetch(api).then(res=>res.json()).then(val=>output.value=(val.info.rate*money.value).toFixed(2))
 });
