@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 100%;
+    background-image: url(./back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.container{
+    width: 80%;
+    height: 400px;
+    background-color: rgb(64 94 135);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 50px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: -6px 6px 16px 1px #000000;
+}
+label{
+color: white;
+font-family: cursive;
+font-size: 20px
+}
+#currency1,#currency2{
+max-width: 100px;
+width: 100%;
+height: 50px;
+text-align: center;
+padding: 10px;
+color:  rgb(100, 123, 155);
+border-radius: 5px;
+}
+.image1,.image2{
+   max-width: 80px;
+   width: 100%;
+    height: 45px;
+    border-radius: 5px;
+   
+}
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+input,#change{
+    max-width: 150px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: cursive;
+    color: rgb(100, 123, 155);
+    padding: 0 10px;
+}
+form,.values{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   column-gap: 30px;
+   margin: auto;
+   
+}
+input::placeholder{
+    font-size: 18px;
+    font-family: cursive;
+    color: rgb(100, 123, 155);
+   
+}
+#output{
+    max-width: 300px;
+}
+@media screen and (max-width:650px){
+    label{
+        font-size:14px
+        }
+    #currency1,#currency2{
+        max-width: 70px;
+        height: 40px;
+        font-size: 12px;
+        }
+    .image1,.image2{
+        max-width: 40px;
+        height: 30px;
+           
+         }
+     form,.values{
+        column-gap: 15px;
+        }
+     input,#change{
+            max-width: 85px;
+            height: 40px;
+            font-size: 12px;
+            padding: 0 5px;
+        }
+        input::placeholder{
+            font-size: 12px;
+             }
+}
+@media screen and (max-width:485px){
+    .container{
+        height: 300px;
+       
+        padding: 30px 9px;
+       
+    }
+    label{
+        font-size:12px
+        }
+    #currency1,#currency2{
+       font-size: 10px;
+       padding: 0px;
+        }
+    .image1,.image2{
+        max-width: 30px;
+        height: 20px;
+           
+         }
+     form,.values{
+        column-gap: 8px;
+        }
+     input,#change{
+            max-width: 65px;
+            height: 35px;
+            font-size: 10px;
+            padding: 0 5px;
+        }
+        input::placeholder{
+            font-size: 10px;
+             }
+
+}

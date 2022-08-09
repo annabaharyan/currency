@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label for="currency1">From</label>
+        <div class="image1"></div>
+        <select name="currency" id="currency1" onchange="setFlag1(event)">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="AMD">AMD</option>
+          <option value="RUB">RUB</option>
+          <option value="GBP">GBP</option>
+          <option value="GEL">GEL</option>
+        </select>
+        <label for="currency2">To</label>
+        <div class="image2"></div>
+        <select name="currency" id="currency2" onchange="setFlag2(event)">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="AMD">AMD</option>
+          <option value="RUB">RUB</option>
+          <option value="GBP">GBP</option>
+          <option value="GEL">GEL</option>
+        </select>
+      </form>
+      <div class="values">
+        <label for="money">Amount of money</label>
+        <input type="number" id="money" placeholder="100" />
+        <button id="change">Change</button>
+      </div>
+      <label for="output">Changed money</label>
+      <input type="number" id="output" />
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
